@@ -44,6 +44,8 @@ $ sudo chmod +x install.sh
 $ sudo ./install.sh
 ```
 
+Successivamente andare sull'interfaccia esposta di node-red e settare correttamente user e password prese da The Things Network.
+
 ### Le successive
 
 ```
