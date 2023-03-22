@@ -1,0 +1,858 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "$$hashKey": "object:115",
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "Gradient colors example",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": 2,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+"datasource": {
+            "name": "default"
+          },
+      "description": "",
+      "flowchartsData": {
+        "flowcharts": [
+          {
+            "allowDrawio": false,
+            "center": true,
+            "csv": "## See more information for the syntax at https://drawio-app.com/import-from-csv-to-drawio/\n##\n## Example CSV. Use ## for comments and # for configuration.\n## The following names are reserved and should not be used (or ignored):\n## id, tooltip, placeholder(s), link and label (see below)\n##\n#\n## Node label with placeholders and HTML.\n## Default is '%name_of_first_column%'.\n#\n# label: %name%<br><i style=\"color:gray;\">%position%</i><br><a href=\"mailto:%email%\">Email</a>\n#\n## Node style (placeholders are replaced once).\n## Default is the current style for nodes.\n#\n# style: label;image=%image%;whiteSpace=wrap;html=1;rounded=1;fillColor=%fill%;strokeColor=%stroke%;\n#\n## Parent style for nodes with child nodes (placeholders are replaced once).\n#\n# parentstyle: swimlane;whiteSpace=wrap;html=1;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;\n#\n## Optional column name that contains a reference to a named style in styles.\n## Default is the current style for nodes.\n#\n# stylename: -\n#\n## JSON for named styles of the form {\"name\": \"style\", \"name\": \"style\"} where style is a cell style with\n## placeholders that are replaced once.\n#\n# styles: -\n#\n## Optional column name that contains a reference to a named label in labels.\n## Default is the current label.\n#\n# labelname: -\n#\n## JSON for named labels of the form {\"name\": \"label\", \"name\": \"label\"} where label is a cell label with\n## placeholders.\n#\n# labels: -\n#\n## Uses the given column name as the identity for cells (updates existing cells).\n## Default is no identity (empty value or -).\n#\n# identity: -\n#\n## Uses the given column name as the parent reference for cells. Default is no parent (empty or -).\n## The identity above is used for resolving the reference so it must be specified.\n#\n# parent: -\n#\n## Adds a prefix to the identity of cells to make sure they do not collide with existing cells (whose\n## IDs are numbers from 0..n, sometimes with a GUID prefix in the context of realtime collaboration).\n## Default is csvimport-.\n#\n# namespace: csvimport-\n#\n## Connections between rows (\"from\": source colum, \"to\": target column).\n## Label, style and invert are optional. Defaults are '', current style and false.\n## If placeholders are used in the style, they are replaced with data from the source.\n## An optional placeholders can be set to target to use data from the target instead.\n## In addition to label, an optional fromlabel and tolabel can be used to name the column\n## that contains the text for the label in the edges source or target (invert ignored).\n## The label is concatenated in the form fromlabel + label + tolabel if all are defined.\n## The target column may contain a comma-separated list of values.\n## Multiple connect entries are allowed.\n#\n# connect: {\"from\": \"manager\", \"to\": \"name\", \"invert\": true, \"label\": \"manages\", \\\n#          \"style\": \"curved=1;endArrow=blockThin;endFill=1;fontSize=11;\"}\n# connect: {\"from\": \"refs\", \"to\": \"id\", \"style\": \"curved=1;fontSize=11;\"}\n#\n## Node x-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# left: \n#\n## Node y-coordinate. Possible value is a column name. Default is empty. Layouts will\n## override this value.\n#\n# top: \n#\n## Node width. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the width. Default is auto.\n#\n# width: auto\n#\n## Node height. Possible value is a number (in px), auto or an @ sign followed by a column\n## name that contains the value for the height. Default is auto.\n#\n# height: auto\n#\n## Padding for autosize. Default is 0.\n#\n# padding: -12\n#\n## Comma-separated list of ignored columns for metadata. (These can be\n## used for connections and styles but will not be added as metadata.)\n#\n# ignore: id,image,fill,stroke,refs,manager\n#\n## Column to be renamed to link attribute (used as link).\n#\n# link: url\n#\n## Spacing between nodes. Default is 40.\n#\n# nodespacing: 40\n#\n## Spacing between levels of hierarchical layouts. Default is 100.\n#\n# levelspacing: 100\n#\n## Spacing between parallel edges. Default is 40. Use 0 to disable.\n#\n# edgespacing: 40\n#\n## Name or JSON of layout. Possible values are auto, none, verticaltree, horizontaltree,\n## verticalflow, horizontalflow, organic, circle or a JSON string as used in Layout, Apply.\n## Default is auto.\n#\n# layout: auto\n#\n## ---- CSV below this line. First line are column names. ----\nname,position,id,location,manager,email,fill,stroke,refs,url,image\nEvan Miller,CFO,emi,Office 1,,me@example.com,#dae8fc,#6c8ebf,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-9-2-128.png\nEdward Morrison,Brand Manager,emo,Office 2,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-10-3-128.png\nRon Donovan,System Admin,rdo,Office 3,Evan Miller,me@example.com,#d5e8d4,#82b366,\"emo,tva\",https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-2-128.png\nTessa Valet,HR Director,tva,Office 4,Evan Miller,me@example.com,#d5e8d4,#82b366,,https://www.draw.io,https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-3-128.png\n",
+            "download": false,
+            "editorTheme": "kennedy",
+            "editorUrl": "https://www.draw.io",
+            "enableAnim": true,
+            "grid": false,
+            "lock": true,
+            "name": "Main",
+            "scale": true,
+            "tooltip": true,
+            "type": "xml",
+            "url": "http://<YourUrl>/<Your XML/drawio file/api>",
+            "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<mxfile host=\"app.diagrams.net\" modified=\"2023-03-22T17:32:36.646Z\" agent=\"5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36\" etag=\"JGf0xYQGfH7_pnGRq4bN\" version=\"21.0.10\" type=\"embed\"><diagram id=\"yTSrfheXbhThAiSCHX68\" name=\"Page-1\">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</diagram></mxfile>",
+            "zoom": "100%"
+          }
+        ]
+      },
+      "format": "short",
+      "graphId": "flowchart_2",
+      "gridPos": {
+        "h": 22,
+        "w": 21,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "newFlag": false,
+      "rulesData": {
+        "rulesData": [
+          {
+            "aggregation": "current",
+            "alias": "P4",
+            "colors": [
+              "#5794F2",
+              "#5794F2",
+              "#73BF69",
+              "#FFEE52",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 1,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": true,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 1,
+            "overlayIcon": false,
+            "pattern": "P5",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "167",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "167",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "content"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              10,
+              15,
+              25,
+              30
+            ],
+            "tooltip": true,
+            "tooltipColors": true,
+            "tooltipLabel": "ROOM 5",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "celsius",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "P4",
+            "colors": [
+              "#5794F2",
+              "#5794F2",
+              "#73BF69",
+              "#FFEE52",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 1,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": true,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 2,
+            "overlayIcon": false,
+            "pattern": "P4",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "166",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "166",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "content"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              10,
+              15,
+              25,
+              30
+            ],
+            "tooltip": true,
+            "tooltipColors": true,
+            "tooltipLabel": "ROOM 4",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "celsius",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "P3",
+            "colors": [
+              "#5794F2",
+              "#5794F2",
+              "#73BF69",
+              "#FFEE52",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 1,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": true,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 3,
+            "overlayIcon": false,
+            "pattern": "P3",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "z4AA9EEG8jXJs2W3tZlR-168",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "z4AA9EEG8jXJs2W3tZlR-168",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "content"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              10,
+              15,
+              25,
+              30
+            ],
+            "tooltip": true,
+            "tooltipColors": true,
+            "tooltipLabel": "ROOM 3",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "celsius",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "P2",
+            "colors": [
+              "#5794F2",
+              "#5794F2",
+              "#73BF69",
+              "#FFEE52",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 1,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": true,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 4,
+            "overlayIcon": false,
+            "pattern": "P2",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "z4AA9EEG8jXJs2W3tZlR-167",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "z4AA9EEG8jXJs2W3tZlR-167",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "content"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              10,
+              15,
+              25,
+              30
+            ],
+            "tooltip": true,
+            "tooltipColors": true,
+            "tooltipLabel": "ROOM 2",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "celsius",
+            "valueData": []
+          },
+          {
+            "aggregation": "current",
+            "alias": "P1",
+            "colors": [
+              "#5794F2",
+              "#5794F2",
+              "#73BF69",
+              "#FFEE52",
+              "rgba(245, 54, 54, 0.9)"
+            ],
+            "column": "Time",
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 1,
+            "eventData": [],
+            "eventProp": "id",
+            "eventRegEx": false,
+            "gradient": true,
+            "hidden": false,
+            "invert": true,
+            "linkData": [],
+            "linkProp": "id",
+            "linkRegEx": true,
+            "mappingType": 1,
+            "metricType": "serie",
+            "order": 5,
+            "overlayIcon": false,
+            "pattern": "P1",
+            "rangeData": [],
+            "reduce": true,
+            "refId": "A",
+            "sanitize": false,
+            "shapeData": [
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "164",
+                "style": "fillColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "163",
+                "style": "fillColor"
+              },
+              {
+                "colorOn": "a",
+                "hidden": false,
+                "pattern": "165",
+                "style": "fillColor"
+              }
+            ],
+            "shapeProp": "id",
+            "shapeRegEx": true,
+            "stringThresholds": [
+              "/.*/",
+              "/.*/"
+            ],
+            "textData": [
+              {
+                "hidden": false,
+                "pattern": "165",
+                "textOn": "wmd",
+                "textPattern": "/.*/",
+                "textReplace": "content"
+              }
+            ],
+            "textProp": "id",
+            "textRegEx": true,
+            "thresholds": [
+              10,
+              15,
+              25,
+              30
+            ],
+            "tooltip": true,
+            "tooltipColors": true,
+            "tooltipLabel": "ROOM 1",
+            "tooltipOn": "a",
+            "tpDirection": "v",
+            "tpGraph": true,
+            "tpGraphScale": "linear",
+            "tpGraphSize": "100%",
+            "tpGraphType": "line",
+            "type": "number",
+            "unit": "celsius",
+            "valueData": []
+          }
+        ]
+      },
+      "targets": [
+        {
+          "alias": "P1",
+"datasource": {
+            "name": "default"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "labels": "",
+          "max": 35,
+          "measurement": "transmissionData",
+          "min": 10,
+          "noise": 2,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "scenarioId": "random_walk",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "spread": 1,
+          "startValue": 20,
+          "tags": [
+            {
+              "key": "openmoteID",
+              "operator": "=",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "alias": "P2",
+"datasource": {
+            "name": "default"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "labels": "",
+          "max": 35,
+          "measurement": "transmissionData",
+          "min": 10,
+          "noise": 2,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "scenarioId": "random_walk",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "spread": 1,
+          "startValue": 20,
+          "tags": [
+            {
+              "key": "openmoteID",
+              "operator": "=",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "alias": "P3",
+"datasource": {
+            "name": "default"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "labels": "",
+          "max": 35,
+          "measurement": "transmissionData",
+          "min": 10,
+          "noise": 2,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "scenarioId": "random_walk",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "spread": 1,
+          "startValue": 20,
+          "tags": [
+            {
+              "key": "openmoteID",
+              "operator": "=",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "alias": "P4",
+"datasource": {
+            "name": "default"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "labels": "",
+          "max": 35,
+          "measurement": "transmissionData",
+          "min": 10,
+          "noise": 2,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "scenarioId": "random_walk",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "spread": 1,
+          "startValue": 20,
+          "tags": [
+            {
+              "key": "openmoteID",
+              "operator": "=",
+              "value": "4"
+            }
+          ]
+        },
+        {
+          "alias": "P5",
+"datasource": {
+            "name": "default"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "labels": "",
+          "max": 35,
+          "measurement": "transmissionData",
+          "min": 10,
+          "noise": 2,
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "scenarioId": "random_walk",
+          "select": [
+            [
+              {
+                "params": [
+                  "temp"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "spread": 1,
+          "startValue": 20,
+          "tags": [
+            {
+              "key": "openmoteID",
+              "operator": "=",
+              "value": "5"
+            }
+          ]
+        }
+      ],
+      "title": "Floorplan example",
+      "transparent": true,
+      "type": "agenty-flowcharting-panel",
+      "valueName": "current",
+      "version": "0.9.0"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Dashboard --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 17,
+        "x": 1,
+        "y": 22
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.4.7",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "datasource",
+            "uid": "-- Dashboard --"
+          },
+          "panelId": 2,
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Mouve your mouse cursor over the graph to see the values in diagram",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
+    }
+  ],
+  "refresh": "10s",
+  "revision": 1,
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [
+    "flowcharting",
+    "gradient"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Flowcharting - Floorplan",
+  "uid": "yNQz3OCZk",
+  "version": 2,
+  "weekStart": ""
+}
