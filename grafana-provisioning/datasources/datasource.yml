@@ -1,0 +1,11 @@
+apiVersion: 1
+datasources:
+  - name: imported_datasource
+    type: influxdb
+    access: proxy
+    database: iotlab
+    user: admin
+    password: admin
+    url: http://influxdb:8086
+    isDefault: true
+    editable: true
