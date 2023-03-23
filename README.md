@@ -3,9 +3,17 @@
 ## Inizializzazione sistema
 ```
 $ sudo apt update
+$ sudo apt upgrade
 $ sudo apt install docker.io
+$ sudo apt install docker-compose
 $ sudo usermod -aG docker userName
+```
+## Avviare il servizio
+```
 $ sudo service docker start
+```
+## Avviare il docker-compose
+```
 $ sudo docker-compose up
 ```
 
