@@ -43,9 +43,21 @@ services:
     volumes:
       - portainer_data:/var/lib/portainer
       - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped          
+    restart: unless-stopped
+  mqtt:
+    container_name: mosquitto
+    image: eclipse-mosquitto:2.0.11
+    restart: always
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto-provisioning/data:/mosquitto/data
+      - ./mosquitto-provisioning/log:/mosquitto/log  
+      - ./mosquitto-provisioning/config:/mosquitto/config           
 volumes:
   grafana_data: {}
   influxdb_data: {}
   nodered_data: {}
   portainer_data: {}
+  mqtt_data: {}

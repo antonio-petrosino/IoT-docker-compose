@@ -7,3 +7,5 @@ docker exec grafana grafana-cli plugins install agenty-flowcharting-panel
 docker-compose restart nodered
 docker-compose restart influxdb
 docker-compose restart grafana
+docker-compose restart portainer
+#docker-compose restart mosquitto
