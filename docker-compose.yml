@@ -12,7 +12,7 @@ services:
     volumes:
         - ./nodered-provisioning/:/data
   influxdb:
-    image: influxdb:1.8
+    image: influxdb:latest
     container_name: influxdb
     ports:
       - '8086:8086'
@@ -46,7 +46,7 @@ services:
     restart: unless-stopped
   mqtt:
     container_name: mosquitto
-    image: eclipse-mosquitto:2.0.11
+    image: eclipse-mosquitto:latest
     restart: always
     ports:
       - "1883:1883"
@@ -54,7 +54,10 @@ services:
     volumes:
       - ./mosquitto-provisioning/data:/mosquitto/data
       - ./mosquitto-provisioning/log:/mosquitto/log  
-      - ./mosquitto-provisioning/config:/mosquitto/config           
+      - ./mosquitto-provisioning/config:/mosquitto/config     
+    environment:
+      - MOSQUITTO_LOG_LEVEL=info  # Aggiunta variabile di ambiente per il livello di log      
+
 volumes:
   grafana_data: {}
   influxdb_data: {}
